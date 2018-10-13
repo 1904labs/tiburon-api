@@ -67,7 +67,7 @@ async function start() {
     }
 
     if (response.data) {
-      (response.output.payload).details = res;ponse.data;
+      (response.output.payload).details = response.data;
     }
     throw response;
   }
