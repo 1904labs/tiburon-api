@@ -12,4 +12,6 @@ async function start() {
   }
 }
 
+console.log("Starting...");
+
 start();
