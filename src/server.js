@@ -42,6 +42,7 @@ async function start() {
       users,
       twilio: {
         accountSid: process.env.TWILIO_ACCOUNT_SID,
+        accountToken: process.env.TWILIO_ACCOUNT_TOKEN,
         apiKey: process.env.TWILIO_API_KEY,
         apiSecret: process.env.TWILIO_API_SECRET
       }
