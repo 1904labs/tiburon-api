@@ -30,20 +30,20 @@ apt-get update
 apt-get install -yq ca-certificates git nodejs build-essential supervisor
 
 # Install nodejs
-mkdir /opt/nodejs
-curl https://nodejs.org/dist/v8.12.0/node-v8.12.0-linux-x64.tar.gz | tar xvzf - -C /opt/nodejs --strip-components=1
-ln -s /opt/nodejs/bin/node /usr/bin/node
-ln -s /opt/nodejs/bin/npm /usr/bin/npm
+sudo apt-get install curl software-properties-common
+curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+sudo apt-get install nodejs
+sudo npm i -g npm
 
 # Get the application source code from the Google Cloud Repository.
 # git requires $HOME and it's not set during the startup script.
 export HOME=/root
-git clone -b gce-deploy https://github.com/TeamTiburon/tiburon-api.git /opt/app
+git clone -b gce-deploy https://github.com/TeamTiburon/tiburon-api.git /opt/app/tiburon-api
 
 # Install app dependencies
 ls /opt/app/
 cd /opt/app/tiburon-api
-npm install -q
+npm install -s
 
 # Create a nodeapp user. The application will run as this user.
 useradd -m -d /home/nodeapp nodeapp
