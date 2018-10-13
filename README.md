@@ -1,10 +1,10 @@
-# Team Tiburon API 
+# Team Tiburon API
 
 ## Requirements
 
-[Node](https://nodejs.org/en/download/) - Tested on v8.11.3
+[Node](https://nodejs.org/en/download/) - Tested on v8.12.0
 
-[npm](https://www.npmjs.com/package/npm) - (Bundled with Node) Tested on v6.1.0
+[npm](https://www.npmjs.com/package/npm) - (Bundled with Node) Tested on v6.4.1
 
 [Bash](https://www.gnu.org/software/bash/)
 
@@ -34,9 +34,9 @@ TWILIO_API_KEY=XXXX
 TWILIO_API_SECRET=XXXX
 ```
 
-`npm install`
+`npm i`
 
-`npm run start`
+`npm start`
 
 ## Cloud Setup
 
@@ -61,7 +61,7 @@ gcloud compute firewall-rules create default-allow-http-8080 \
     --source-ranges 0.0.0.0/0 \
     --target-tags http-server \
     --description "Allow port 8080 access to http-server"
-    
+
 ```
 
 ## Cloud "Deployment"
