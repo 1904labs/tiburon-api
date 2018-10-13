@@ -49,7 +49,7 @@ gcloud compute instances create tiburon-api \
     --scopes userinfo-email,cloud-platform \
     --metadata-from-file startup-script=startup-script.sh \
     --zone us-central1-f \
-    --tags http-server
+    --tags http-server,websocket
 ```
 
 Setup firewall rules:
