@@ -27,12 +27,12 @@ service google-fluentd restart &
 
 # Install dependencies from apt
 apt-get update
-apt-get install -yq ca-certificates git nodejs build-essential supervisor
+apt-get install -yq ca-certificates git build-essential supervisor
 
 # Install nodejs
-sudo apt-get install curl software-properties-common
+sudo apt-get install -y curl software-properties-common
 curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
-sudo apt-get install nodejs
+sudo apt-get install -y nodejs
 sudo npm i -g npm
 
 # Get the application source code from the Google Cloud Repository.
