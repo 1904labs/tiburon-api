@@ -48,7 +48,6 @@ async function start() {
     },
     plugin: api,
     routes: {
-      prefix: '/api/v1'
     }
   }];
 

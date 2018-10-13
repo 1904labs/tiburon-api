@@ -5,11 +5,11 @@ function buildRoutes(server, options) {
 
   const controller = new Controller(server, options);
 
-  const routes = {
+  const routes = [{
     method: 'POST',
     path: '/token',
     handler: controller.token.bind(controller)
-  }
+  }];
 
   server.log('Token route');
 
