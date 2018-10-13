@@ -1,5 +1,10 @@
+const Routes = require('./routes');
+
 async function register(server, options) {
-  // server.routes();
+
+  const routes = Routes.buildRoutes(server, options);
+
+  server.route(routes);
 
   server.log(['info'], 'Registered routes');
 }

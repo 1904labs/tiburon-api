@@ -2,11 +2,21 @@ const Hapi = require('hapi');
 
 const api = require('./api');
 
-const server = new Hapi.Server();
+const users = {
+  'aramirez': 'offline'
+};
 
 async function start() {
   const registerOptions = { once: true };
   const plugins = [{
+    options: {
+      heartbeat: {
+        interval: 15000,
+        timeout: 5000
+      }
+    },
+    plugin: require('nes')
+  }, {
     options: {
       includes: {
         request: ['headers', 'payload'],
@@ -29,6 +39,12 @@ async function start() {
     plugin: require('good')
   }, {
     options: {
+      users,
+      twilio: {
+        accountSid: process.env.TWILIO_ACCOUNT_SID,
+        apiKey: process.env.TWILIO_API_KEY,
+        apiSecret: process.env.TWILIO_API_SECRET
+      }
     },
     plugin: api,
     routes: {
