@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "serve": "PORT=8080 HOST=0.0.0.0 pm2 start index.js",
+    "serve": "pm2 start index.js",
     "refresh": "git pull && pm2 restart index"
   },
   "repository": {

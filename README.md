@@ -29,6 +29,7 @@ HOST=localhost
 PORT=8080
 
 TWILIO_ACCOUNT_SID=XXXX
+TWILIO_ACCOUNT_TOKEN=XXXX
 TWILIO_API_KEY=XXXX
 TWILIO_API_SECRET=XXXX
 ```
@@ -49,7 +50,7 @@ gcloud compute instances create tiburon-api \
     --scopes userinfo-email,cloud-platform \
     --metadata-from-file startup-script=startup-script.sh \
     --zone us-central1-f \
-    --tags http-server,websocket
+    --tags http-server
 ```
 
 Setup firewall rules:
@@ -61,10 +62,6 @@ gcloud compute firewall-rules create default-allow-http-8080 \
     --target-tags http-server \
     --description "Allow port 8080 access to http-server"
     
-gcloud compute firewall-rules create default-allow-websockets \
-    --allow tcp:65080 \
-    --target-tags websocket \
-    --description "Allow websocket traffic on port 65080"
 ```
 
 ## Cloud "Deployment"
