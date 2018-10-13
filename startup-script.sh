@@ -38,7 +38,7 @@ ln -s /opt/nodejs/bin/npm /usr/bin/npm
 # Get the application source code from the Google Cloud Repository.
 # git requires $HOME and it's not set during the startup script.
 export HOME=/root
-git clone https://github.com/TeamTiburon/tiburon-api.git /opt/app
+git clone -b gce-deploy https://github.com/TeamTiburon/tiburon-api.git /opt/app
 
 # Install app dependencies
 ls /opt/app/
