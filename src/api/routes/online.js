@@ -2,11 +2,11 @@ function buildRoutes(server, options) {
 
   const controller = new Controller(server, options);
 
-  const routes = {
+  const routes = [{
     method: 'GET',
     path: '/online',
     handler: controller.online.bind(controller)
-  }
+  }];
 
   server.log('Online route');
 

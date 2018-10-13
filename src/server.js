@@ -48,7 +48,6 @@ async function start() {
     },
     plugin: api,
     routes: {
-      prefix: '/api/v1'
     }
   }];
 
@@ -68,7 +67,7 @@ async function start() {
     }
 
     if (response.data) {
-      (response.output.payload).details = res;ponse.data;
+      (response.output.payload).details = response.data;
     }
     throw response;
   }
