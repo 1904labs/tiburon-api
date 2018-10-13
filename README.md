@@ -67,3 +67,12 @@ gcloud compute firewall-rules create default-allow-websockets \
     --description "Allow websocket traffic on port 65080"
 ```
 
+## Cloud "Deployment"
+
+SSH into cloud compute:
+
+`gcloud compute --project "team-tiburon" ssh --zone "us-central1-f" "tiburon-api"`
+
+`cd opt/app/tiburon-api`
+
+`npm run refresh`

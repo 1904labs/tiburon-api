@@ -39,7 +39,7 @@ sudo npm i -g npm
 # git requires $HOME and it's not set during the startup script.
 export HOME=/root
 rm -rf /opt/app/tiburon-api
-git clone -b gce-deploy https://github.com/TeamTiburon/tiburon-api.git /opt/app/tiburon-api
+git clone https://github.com/TeamTiburon/tiburon-api.git /opt/app/tiburon-api
 
 # Install app dependencies
 ls /opt/app/
