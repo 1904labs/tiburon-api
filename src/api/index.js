@@ -4,7 +4,7 @@ async function register(server, options) {
   server.log(['info'], 'Registered routes');
 }
 
-module.epxorts = {
+module.exports = {
   name: 'api',
   register,
   version: '1.0.0'

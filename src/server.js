@@ -8,7 +8,10 @@ async function start() {
   const registerOptions = { once: true };
   const plugins = [{
     options: {
-      includes,
+      includes: {
+        request: ['headers', 'payload'],
+        response: ['headers', 'payload']
+      },
       reporters: {
         myConsoleReporter: [
           {
